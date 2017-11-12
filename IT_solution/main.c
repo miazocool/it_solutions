@@ -14,92 +14,72 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "list_items.h"
+#include "list_functions.h"
+
+int choose_license(void);
+int choose_windows(void);
 
 int main ()
 {
-    int product;
     printf("Welcome to ITSolutions Store!\n");
-    printf("What kind of license you are looking for? \n");
-    printf("1. Windows \n");
-    printf("2. Microsoft Office \n");
-    printf("3. Antivirus \n");
-    printf("4. Other licenses \n\n");
-    printf("Please Choose 1-4: ");
-
-
-    scanf("%d",&product);
-
-    if (product == 1)
+    int choice = choose_license();
+    if (choice==1)
     {
-        int choice = 0;
+        //int choice = 0;
         double totalPrice = 0;
 
         printf("Choose Your Windows\n\n");
 
-    do{
-        printf("PRODUCT: \n");
-        printf("1.  Windows 7 Home Premium       RM %.2lf \n", win7homepremium_price);
-        printf("2.  Windows 7 Pro                RM %.2lf \n", win7pro_price);
-        printf("3.  Windows 7 Ultimate           RM %.2lf \n", win7ultimate_price);
-        printf("4.  Windows 8                    RM %.2lf \n", win8_price);
-        printf("5.  Windows 8.1                  RM %.2lf \n", win81_price);
-        printf("6.  Windows 8 Pro                RM %.2lf \n", win8pro_price);
-        printf("7.  Windows 8.1 Pro              RM %.2lf \n", win81pro_price);
-        printf("8.  Windows 10 Home              RM %.2lf \n", win10home_price);
-        printf("9.  Windows 10 Pro               RM %.2lf \n", win10pro_price);
-        printf("10. Windows 10 Enterprice        RM %.2lf \n", win10enterprise_price);
-        printf("11. Main Menu \n\n");
-        printf("Please Make Your Choice: ");
-        scanf("%i", &choice);
+        do{
+            int choice_windows
+            choice_windows = choose_windows(void);
+            switch(choice_windows){
+            case 1:
+                totalPrice += win7homepremium_price;
+                break;
+            case 2:
+                totalPrice += win7pro_price;
+                break;
+            case 3:
+                totalPrice += win7ultimate_price;
+                break;
+             case 4:
+                totalPrice += win8_price;
+                break;
+            case 5:
+                totalPrice += win81_price;
+                break;
+            case 6:
+                totalPrice += win8pro_price;
+                break;
+             case 7:
+                totalPrice += win81pro_price;
+                break;
+            case 8:
+                totalPrice += win10home_price;
+                break;
+            case 9:
+                totalPrice += win10pro_price;
+                break;
+             case 10:
+                totalPrice +=  win10enterprise_price;
+                break;
+            case 11:
+                printf("Thanks for choosing us\n");
+                break;
+            default:
+                printf("*** Error:  Your choice is not on the menu. \n");
+                break;
+            }
 
-        switch(choice){
-        case 1:
-            totalPrice += win7homepremium_price;
-            break;
-        case 2:
-            totalPrice += win7pro_price;
-            break;
-        case 3:
-            totalPrice += win7ultimate_price;
-            break;
-         case 4:
-            totalPrice += win8_price;
-            break;
-        case 5:
-            totalPrice += win81_price;
-            break;
-        case 6:
-            totalPrice += win8pro_price;
-            break;
-         case 7:
-            totalPrice += win81pro_price;
-            break;
-        case 8:
-            totalPrice += win10home_price;
-            break;
-        case 9:
-            totalPrice += win10pro_price;
-            break;
-         case 10:
-            totalPrice +=  win10enterprise_price;
-            break;
-        case 11:
-            printf("Thanks for choosing us\n");
-            break;
-        default:
-            printf("*** Error:  Your choice is not on the menu. \n");
-            break;
-        }
+            printf("Total so far: RM %.2lf\n\n", totalPrice);
 
-        printf("Total so far: RM %.2lf\n\n", totalPrice);
+        } while (choice != 11);
 
-    } while (choice != 11);
-
-    printf("Your order is RM %.2lf \n\n", totalPrice);
+        printf("Your order is RM %.2lf \n\n", totalPrice);
 
 }
-
-    else if ( product == 2)
+    else if (choice== 2)
     {
        int choice = 0;
         double totalPrice = 0;
@@ -143,7 +123,7 @@ int main ()
 
     printf("Your order is RM %.2lf \n\n", totalPrice);
     }
-    else if ( product == 3)
+    else if (choice == 3)
     {
        int choice = 0;
         double totalPrice = 0;
@@ -310,7 +290,7 @@ int main ()
 
     printf("Your order is RM %.2lf \n\n", totalPrice);
     }
-    else if ( product == 4 )
+    else if ( choice == 4 )
     {
     int choice = 0;
     double totalPrice = 0;
@@ -378,7 +358,6 @@ int main ()
 
     printf("Your order is RM %.2lf \n\n", totalPrice);
     }
-
     else
         printf("Your choice are not in list!");
 

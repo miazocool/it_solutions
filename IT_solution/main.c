@@ -6,7 +6,7 @@
 
 /* 
  * File:   main.c
- * Author: Zaim Saharudin
+ * Author: Zaim.S
  *
  * Created on November 13, 2017, 3:38 AM
  */

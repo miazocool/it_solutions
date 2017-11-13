@@ -6,14 +6,27 @@
 
 /* 
  * File:   list_functions.h
- * Author: Zaim Saharudin
+ * Author: Zaim.S
+ * Author: Apik
  *
  * Created on November 13, 2017, 4:56 AM
+ */
+
+/*Apik dari Zaim
+ 1. Ko fahamkan istilah function tu cammana.
+ 2.Kau tengok example dari list_function.h macam mana aku buat 
+ * function choose_windows() dan choose_license()
+ 3.Lepas tu ko apply kat semua function yang ada dalam main.c
+ 4. FUngsi kita buat function ni sebab nak nampak more organise dan senang 
+ * nak debug kalau ada masalah.
+ 5.Kauu settlekan semua ni dulu, nnti aku settlekan masalah menu windows kau.
+ 6. Kalau tak faham roger.
  */
 
 #ifndef LIST_FUNCTIONS_H
 #define LIST_FUNCTIONS_H
 #include <stdio.h>
+int hello=0;
 int choose_license(void){
     int product;
     printf("Welcome to ITSolutions Store!\n");

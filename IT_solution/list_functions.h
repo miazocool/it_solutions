@@ -13,17 +13,6 @@
 
 #ifndef LIST_FUNCTIONS_H
 #define LIST_FUNCTIONS_H
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-#ifdef __cplusplus
-}
-#endif
-
-#endif /* LIST_FUNCTIONS_H */
-
 #include <stdio.h>
 int choose_license(void){
     int product;
@@ -57,3 +46,4 @@ int choose_windows(void){
     scanf("%i", &choice);
     return  choice;
 }
+#endif /* LIST_FUNCTIONS_H */

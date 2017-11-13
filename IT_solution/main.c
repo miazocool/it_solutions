@@ -10,14 +10,14 @@
  *
  * Created on November 13, 2017, 3:38 AM
  */
-
+int choose_license(void);
+int choose_windows(void);
 #include <stdlib.h>
 #include <stdio.h>
 #include "list_items.h"
 #include "list_functions.h"
 
-int choose_license(void);
-int choose_windows(void);
+
 
 int main ()
 {
@@ -31,8 +31,7 @@ int main ()
         printf("Choose Your Windows\n\n");
 
         do{
-            int choice_windows
-            choice_windows = choose_windows(void);
+            int choice_windows = choose_windows();
             switch(choice_windows){
             case 1:
                 totalPrice += win7homepremium_price;

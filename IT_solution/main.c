@@ -10,6 +10,11 @@
  *
  * Created on November 13, 2017, 3:38 AM
  */
+
+/*
+ Untuk Zaim
+ 1. Settlekan masalah menu yang apik cakap.
+ */
 int choose_license(void);
 int choose_windows(void);
 #include <stdlib.h>
